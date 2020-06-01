@@ -52,6 +52,10 @@ public class ReservationApiController {
     @DeleteMapping("/reservation/{id}")
     public void deleteReservation(@PathVariable int id) {
         reservationController.deleteReservation(id);
+    }
 
+    @PutMapping("/reservation")
+    public void putReservation(int id, int seats) {
+        boolean updated = reservationController.updateReservation(id, seats);
     }
 }

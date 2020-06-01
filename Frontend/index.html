@@ -5,65 +5,26 @@
 <head>
     <title>Reservations</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="jquery.datetimepicker.min.css">
-    </link>
     <script src="logic.js"></script>
-    <script src="jquery.js"></script>
-    <script src="jquery.datetimepicker.full.js"></script>
 </head>
 
-<body onload="getUsersReservations()">
-    <h1>Reservations</h1>
-    <div>
-        <h2>Make a new reservation</h2>
-        <p>Please enter date and time and press enter:</p>
-        <div>
-            <input id="datetime">
-            <script>
-                $("#datetime").datetimepicker();
-            </script>
-            <button type="button" onclick="getMaxSeats()">enter</button>
-        </div>
-        <div>
-            <label for="max-seats">Max available seats at that time:</label>
-            <textarea id="max-seats"></textarea>
-        </div>
-        <div>
-            <label for="seats">Seats:</label>
-            <textarea id="seats"></textarea>
-        </div>
-        <div>
-            <label for="email">E-Mail:</label>
-            <textarea id="email"></textarea>
-        </div>
-        <div>
-            <button type="button" onclick="postReservation()">submit</button>
+<body>
+    <h1>Restaurant Name</h1>
+    <div class="box">
+        <h2>LogIn</h2>
+        <div class="container">
+            <div class="text-input">
+                <label for="email">E-Mail adress:</label>
+                <textarea id="email"></textarea>
+            </div>
+            <div class="text-input">
+                <label for="password">Password:</label>
+                <textarea id="password"></textarea>
+            </div>
+            <div class="button" id="continue">
+                <button type="button" onclick="logIn()">Continue</button>
+            </div>
         </div>
     </div>
-    <div>
-        <h2>Your reservations</h2>
-        <table id="res-tab">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Persons</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="reservation-table">
-            <!-- is inserted through js function createReservationTable-->
-            </tbody>
-        </table>
-        <div id="change-persons"></div>
-
-
-    </div>
-
-
 
 </body>
-
-</html>

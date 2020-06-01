@@ -58,5 +58,15 @@ public class UserController {
         }
         return token;
     }
+
+    public User login(String email, String password) {
+        User user = null;
+        for (User customer : userRepository.userArr) {
+            if (customer.getEmail().equals(email) && customer.getPassword().equals(password)) {
+                user = customer;
+            }
+        }
+        return user;
+    }
 }
 

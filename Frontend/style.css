@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    
+    display: grid;
 }
 
 table {
@@ -50,3 +50,37 @@ tr:nth-child(even) {
 .delete:hover {
     background-color: rgb(255, 100, 100);
 }
+
+textarea {
+    height: 20px;
+    width: 185px;
+    position: absolute;
+    left: 230px;
+}
+
+.container {
+    text-align: left;
+    margin-left: 15px;
+    padding: 10px;
+
+}
+
+.text-input {
+    padding: 10px;
+}
+
+#continue {
+    position: relative;
+    left: 265px;
+}
+
+.button {
+    margin: 10px;
+}
+
+.box {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+

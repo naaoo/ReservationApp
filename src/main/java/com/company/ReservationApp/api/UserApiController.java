@@ -24,6 +24,13 @@ public class UserApiController {
         return instance;
     }
 
+    @GetMapping("/login")
+    public User getUser(String email, String password) {
+        User user = userController.login(email, password);
+        return user;
+    }
+
+
     @GetMapping("/users")
     public ArrayList<User> all() {
         return userController.getAll();
@@ -42,6 +49,5 @@ public class UserApiController {
     @PostMapping("/api/session")
     public void login(String email, String password) {
         Token token = userController.userLogin(email, password);
-
     }
 }

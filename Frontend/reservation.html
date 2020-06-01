@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery.datetimepicker.min.css">
+    </link>
+    <script src="logic.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery.datetimepicker.full.js"></script>
+</head>
+<body onload="fetchUser(); getUsersReservations()">
+    <h1>Reservations</h1>
+    <div class="box">
+        <h2>Make a new reservation</h2>
+        <div>
+            <input id="datetime">
+            <script>
+                $("#datetime").datetimepicker();
+            </script>
+            <button type="button" onclick="getMaxSeats()">enter</button>
+        </div>
+        <div class="text-input" id="seats-div">
+            <!-- is filled through function getMaxSeats -->
+        </div>
+        <div class="text-input" id="submit-div">
+            <!-- is filled through function getMaxSeats -->
+        </div>
+    </div>
+    <div class="box">
+        <h2>Your reservations</h2>
+        <table id="res-tab">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Persons</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="reservation-table">
+            <!-- is inserted through function createReservationTable -->
+            </tbody>
+        </table>
+        <div id="change-persons"></div>
+    </div>
+    <div class ="button">
+        <button type="button" onclick="logOut()">Log Out</button>
+    </div>
+</body>
+</html>

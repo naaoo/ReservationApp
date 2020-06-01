@@ -59,4 +59,14 @@ public class ReservationController {
             }
         }
     }
+
+    public boolean updateReservation(int id, int seats) {
+        for (Reservation reservation : reservationRepository.reservationArr) {
+            if (reservation.id == id) {
+                reservation.setSeats(seats);
+                return true;
+            }
+        }
+        return false;
+    }
 }

@@ -28,6 +28,10 @@ public class Reservation {
         return seats;
     }
 
+    public void setSeats(int seats) {
+        this.seats = seats;
+    }
+
     public String getEmail() {
         return email;
     }
